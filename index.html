@@ -80,7 +80,9 @@ marquee {
     </style>
  <script language="javascript">
      
- var zi=prompt("请输入今天的关键字：");
+ var myfunction=function(){
+        zi=prompt("请输入今天的关键字：");
+    }
     function getCurDate()
     {
     var d = new Date();
@@ -112,6 +114,7 @@ marquee {
     if(temp<10) return "0"+temp;
     else return temp;
     }
+    myfunction();
     setInterval("getCurDate()",100);
     </script>
 
