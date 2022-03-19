@@ -79,13 +79,6 @@ marquee {
 }
     </style>
 <script language="javascript">
-     var start=false;
-    var myfunction=function()
-            start=true;
-            if(start){
-                setInterval("getCurDate()",100);
-            }
-  }
     function getCurDate()
     {
     var d = new Date();
@@ -117,8 +110,7 @@ marquee {
     if(temp<10) return "0"+temp;
     else return temp;
     }
-    myfunction();
-    // setInterval("getCurDate()",100);
+   setInterval("getCurDate()",100);
     </script>
 
 
