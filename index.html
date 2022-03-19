@@ -78,11 +78,15 @@ marquee {
     width: -webkit-fill-available;
 }
     </style>
- <script language="javascript">
-     
- var myfunction=function(){
-        zi=prompt("请输入今天的关键字：");
-    }
+<script language="javascript">
+     var start=false;
+    var myfunction=function(){
+            zi=prompt("请输入今天的关键字：");
+            start=true;
+            if(start){
+                setInterval("getCurDate()",100);
+            }
+  }
     function getCurDate()
     {
     var d = new Date();
@@ -106,7 +110,7 @@ marquee {
     divT1.innerHTML= month;
     divT2.innerHTML= days;
     divT3.innerHTML= ndate;
-    divT4.innerHTML= seconds;       
+    divT4.innerHTML= seconds;
     divT5.innerHTML= zi;
     }
     function add_zero(temp)
@@ -115,7 +119,7 @@ marquee {
     else return temp;
     }
     myfunction();
-    setInterval("getCurDate()",100);
+    // setInterval("getCurDate()",100);
     </script>
 
 
